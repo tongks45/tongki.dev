@@ -9,7 +9,7 @@ It is built with the following:
     - 
 - HTMX
 - mini.css framework
-- Supabase DB
+- Supabase DB (?)
 
 One of the key features of the website is its strongly typed data that ensures pages will render with complete
 data retrieved from a database.
