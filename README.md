@@ -6,7 +6,6 @@ It is built with the following:
 - Rust
     - Axum
     - Askama
-    - 
 - HTMX
 - mini.css framework
 - Supabase DB (?)
