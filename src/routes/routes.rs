@@ -38,7 +38,7 @@ struct NotFoundTemplate<'a> {
     message: &'a str,
 }
 
-use crate::middlewares::index_middleware::index_middleware;
+use crate::middlewares::request_logger::request_logger;
 #[derive(Serialize)]
 struct not_found_msg {
     header: String,
@@ -46,7 +46,7 @@ struct not_found_msg {
 }
 pub fn routes() -> Router {
     Router::new()
-        .route("/", get(root).route_layer(from_fn(index_middleware)))
+        .route("/", get(root).route_layer(from_fn(request_logger)))
         .fallback(not_found)
 }
 async fn root() -> ApiOK{
